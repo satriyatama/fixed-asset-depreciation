@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <title><%= title %></title>
+  <style>
+        * {
+      font-family: 'Rubik', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    main {
+      width: 100%;
+      min-height: 100vh;
+      background-color: rgb(65, 158, 245);
+    }
+    .container {
+      background-color: white;
+      height: 400px;
+      width: 400px;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: black 3px 3px 8px;
+    }
+    .title {
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <main class="d-flex align-items-center justify-content-center">
+    <div class="container flex-column">
+      <h1 class="title font-weight-bold d-flex justify-content-center mb-5">Fixed Assets Depreciation Calculator</h1>
+      <form class="d-flex flex-column" method="post" name="" action="/result/straight-line">
+        <div class="form-group mb-1">
+          <label for="assetCost">Asset Cost ($)</label>
+          <input name="assetCost" type="number" class="form-control" id="assetCost">
+        </div>
+        <div class="form-group mb-1">
+          <label for="salvageValue">Salvage Value ($)</label>
+          <input name="salvageValue" type="number" class="form-control" id="salvageValue">
+        </div>
+        <div class="form-group mb-3">
+          <label for="depreciationYears">Depreciation Years</label>
+          <input name="depreciationYears" type="number" class="form-control" id="depreciationYears">
+        </div>
+        <button type="submit" class="btn btn-success d-flex justify-content-center align-self-center w-50">Calculate</button>
+      </form>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+</body>
+</html>
