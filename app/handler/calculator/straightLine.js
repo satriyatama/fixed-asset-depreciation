@@ -8,7 +8,6 @@ module.exports = function straightLine(req, res) {
   const depreciation = helper.depreciationFormula.straightLine(assetCost,salvageValue,depreciationYears)
   const depreciationPerYear = parseFloat(depreciation.depreciationPerYear.toFixed(3))
   const depreciationDetails = depreciation.details
-  console.log(depreciationDetails)
 
   res.render(
     'resultStraightLine',

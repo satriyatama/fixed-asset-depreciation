@@ -31,7 +31,6 @@ module.exports = function straightLine(assetCost, salvageValue, depreciationYear
     }
   }
 
-  console.log(details)
   return {
     depreciationPerYear,
     details
